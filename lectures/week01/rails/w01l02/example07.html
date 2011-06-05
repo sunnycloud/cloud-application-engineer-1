@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>JQuery Example</title>
+<style>
+  .hilite { background:yellow; }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="slider">This is a para.</div>
+<div class="slider">This is a para.</div>
+<div class="slider">This is another para.</div>
+
+<script>
+$(".slider").click(
+  function () {
+    $(this).slideUp();
+  }
+);
+$(".slider").hover(
+  function () {
+    $(this).addClass("hilite");
+  } ,
+  function () {
+    $(this).removeClass("hilite");
+  }
+);
+</script>
+</body>
+</html>

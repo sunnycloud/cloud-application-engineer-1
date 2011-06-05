@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>JQuery Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="foo">Foo: Click Here for Alert</div>
+<div id="bar">Bar: This Does Nothing.</div>
+
+<script>
+// use JQuery to bind a custom function to the "click" event of
+// the HTML element named 'foo'
+$("#foo").click(function() {
+  alert("foo was clicked!");
+}
+);
+</script>
+</body>
+</html>

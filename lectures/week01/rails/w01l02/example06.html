@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>JQuery Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="para">This is a para.</div>
+<div class="notapara">This is not a para.</div>
+<div class="para">This is another para.</div>
+
+<script>
+// use JQuery to bind a custom function to the "click" event of
+// the HTML element named 'foo'
+$(".para").click(function() {
+  alert("para was clicked!");
+}
+);
+</script>
+</body>
+</html>
