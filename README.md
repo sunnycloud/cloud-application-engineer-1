@@ -52,10 +52,13 @@ Here you'll see the directories broken down by language, depending on the assign
 <pre>
 $ ls -alt
 drwxr-xr-x 4 kila staff 136 Jun  6 11:23 .
+-rw-r--r-- 1 kila staff 531 Jun  6 12:47 ps01.txt
 drwxr-xr-x 2 kila staff  68 Jun  6 11:23 scheme
 drwxr-xr-x 2 kila staff  68 Jun  6 11:23 ruby
 drwxr-xr-x 3 kila staff 102 Jun  6 11:23 ..
 </pre>
+
+Problems are found in psNUM.txt
 
 Navigate to the correct directory/sub-directory and...code!
 
@@ -112,3 +115,12 @@ Install gems specified in Gemfile
 <pre>
 $ bundle install
 </pre>
+
+
+## How to run a rails project on your local machine ##
+
+<pre>
+$ rails s
+</pre>
+
+Navigate to http://localhost:3000 !
