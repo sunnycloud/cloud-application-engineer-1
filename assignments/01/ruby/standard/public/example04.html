@@ -1,0 +1,26 @@
+<html>
+<body>
+<script type="text/javascript">
+/*
+ * define a function showAlert() which calls the built-in
+ * javascript function alert() which displays a dialog to
+ * the user
+ */
+function showAlert() {
+  //
+  // NOTE: new Date() means "construct a new date object"
+  // (you will learn more about this soon)
+  //
+  // since the object is used in the context of string
+  // concatenation using '+', the date is turned into a
+  // string
+  //
+  alert("This is an alert! the time is " + new Date());
+}
+</script>
+
+<img src="http://www.google.com/images/logos/ps_logo2.png" onclick="showAlert()" />
+<p>Click the logo to show the alert</p>
+
+</body>
+</html>
