@@ -124,3 +124,63 @@ $ rails s
 </pre>
 
 Navigate to http://localhost:3000 !
+
+
+## How to install mit-scheme on ubuntu 10.04 ##
+
+<pre>
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential m4
+</pre>
+
+Download the correct pre-compiled binary for your operating system from:
+http://www.gnu.org/software/mit-scheme/
+
+and follow the installation instructions (shown here for unix x86-64):
+http://www.gnu.org/software/mit-scheme/documentation/mit-scheme-user/Unix-Installation.html
+
+In case the link becomes broken, the steps are:
+
+<pre>
+$ tar xzf mit-scheme-VERSION.tar.gz
+$ cd mit-scheme-VERSION/src
+$ ./configure
+$ make compile-microcode
+$ make install
+</pre>
+
+Note: you may have to run
+<pre>
+$ sudo make install
+</pre>
+if you get permission denied errors
+
+then clean up the mess:
+<pre>
+$ cd ../..
+$ rm -rf mit-scheme-VERSION
+</pre>
+
+## How to get mit-scheme to play nice with emacs ##
+
+Open emacs and in the minibuffer:
+
+<pre>
+M-x customize-group scheme
+</pre>
+
+and change:
+<pre>
+Scheme Program Name: scheme
+</pre>
+to
+<pre>
+Scheme Program Name: mit-scheme
+</pre>
+
+This will insert elisp code into your .emacs file setting this change. We need
+to reload this file so that emacs is aware of our changes:
+<pre>
+M-x load-file RET ~/.emacs RET
+</pre>
