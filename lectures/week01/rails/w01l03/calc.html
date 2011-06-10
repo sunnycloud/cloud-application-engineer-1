@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Calculator</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+	function calc() {
+		var oper = $("#op")[0].value;
+		var operFun = getFun(oper);
+		
+		var value1 = parseInt( $("#v1")[0].value );
+		var value2 = parseInt( $("#v2")[0].value );
+		
+		$("#result")[0].value = operFun(value1, value2);
+	}
+	
+	function getFun(n) {
+		if (n == "plus") {
+			return function(x, y) { return (x + y); }
+		} else if (n == "times") {
+			return function(x, y) { return (x * y); }			
+		} else {
+			return function(x, y) { alert("I don't know how to do: " + n); }
+		}
+	}
+</script>
+<form onsubmit="return false;">
+<input type="text" id="v1" /><br />
+<input type="text" id="v2" /><br />
+<select id="op" />
+  <option value="plus">plus</option>
+  <option value="times">times</option>
+</select><br />
+<input type="text" id="result" /><br />
+<input type="submit" value="Do it!" onclick="calc();"/>
+</form>
+</body>
+</html>
