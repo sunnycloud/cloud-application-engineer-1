@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>AJAXY!</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+$(document).ready({
+
+});
+
+function do_it() {
+  var the_file = $("#a_select")[0].value;
+if (the_file == '-') {
+      $("#the_message")[0].innerHTML = "<h1>Initial!</h1><p>Select a value</p>";
+  } else {
+  $.getJSON("http://localhost:3000/person/" + the_file,
+    function(data) {
+      $("#the_message")[0].innerHTML = "<h1>" + data.name + "</h1><p>" + data.message + "</p>";
+    });
+}
+}
+</script>
+<div id="the_message">This is a placeholder</div>
+<hr size="1" />
+<form onsubmit="return false;">
+<select id="a_select" onchange="do_it()">
+  <option value="-">-</option>
+  <option value="foo.json">foo</option>
+  <option value="bar.json">bar</option>
+  <option value="baz.json">baz</option>
+</select>
+</form>
+</body>
+</html>
