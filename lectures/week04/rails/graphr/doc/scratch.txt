@@ -1,0 +1,7 @@
+curl -v -v -X POST --data "{\"graph_point\":{\"x_coord\":\"2.05\",\"y_coord\":\"4.13\"}}" -H "Content-Type: application/json" -H "Accept: application/json" "http://localhost:3000/graph_points.json"
+
+
+curl -v -v -X PUT --data "{\"graph_point\":{\"x_coord\":\"122.23\",\"y_coord\":\"56.78\"}}" -H "Content-Type: application/json" "http://localhost:3000/graph_points/1.json"
+
+
+curl -v -v -X DELETE "http://localhost:3000/graph_points/1.json"

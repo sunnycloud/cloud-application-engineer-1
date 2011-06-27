@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>X coord:</b>
+  <%= @graph_point.x_coord %>
+</p>
+
+<p>
+  <b>Y coord:</b>
+  <%= @graph_point.y_coord %>
+</p>
+
+
+<%= link_to 'Edit', edit_graph_point_path(@graph_point) %> |
+<%= link_to 'Back', graph_points_path %>
