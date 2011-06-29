@@ -23,11 +23,11 @@ function insert(value, alist) {
     return make_listnode(value, alist);
 }
 
-// note: in the slides it was 'delete'. delete is what's called a "reserved
-//       word" in JavaScript. This means that it is already in use/has
+// note: originally in the slides it was 'delete'. delete is what's called a
+//       "reserved word" in JavaScript. This means that it is already in use/has
 //       special meaning, and shouldn't be redefined by you. gfmi (google for
 //       more information :P )
-function deleteNode(value, alist) {
+function remove(value, alist) {
     var last = null;
     for (var cur = alist; cur != null; cur = cur['next']) {
         if (cur['value'] == value) {
@@ -70,6 +70,6 @@ console.log(length(blist));
 console.log(length(alist));
 
 
-console.log(deleteNode(12, clist));
+console.log(remove(12, clist));
 console.log(clist);
 console.log(length(clist));
